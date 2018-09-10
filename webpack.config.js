@@ -20,15 +20,15 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           cacheDirectory: true,
-        },
+        }
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss)$/,
         exclude: /node_modules/,
         use: [
           __DEV__ ? 'style-loader' : MiniCssExtractPlugin.loader,
