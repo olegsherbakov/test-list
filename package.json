@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "develop": "node server.js --dev --hot --progress --local",
-    "deploy": "yarn run deploy --watch --progress"
+    "deploy": "yarn install && webpack"
   },
   "private": true,
   "dependencies": {
