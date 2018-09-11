@@ -1,12 +1,12 @@
-const path = require('path');
-const argv = require('yargs').argv;
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const argv = require('yargs').argv
+const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-const __HOT__ = !!argv.hot;
-const __DEV__ = !!argv.dev;
+const __HOT__ = !!argv.hot
+const __DEV__ = !!argv.dev
 const mode = __DEV__ ? 'development' : 'production'
 
 const webpackConfig = {
@@ -61,13 +61,13 @@ const webpackConfig = {
   resolve: {
     extensions: ['.js', '.json']
   }
-};
-
-if (__HOT__) {
-  webpackConfig.entry.app.push('react-hot-loader/patch');
-  webpackConfig.entry.app.push('webpack-hot-middleware/client');
-
-  webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
 }
 
-module.exports = webpackConfig;
+if (__HOT__) {
+  webpackConfig.entry.app.push('react-hot-loader/patch')
+  webpackConfig.entry.app.push('webpack-hot-middleware/client')
+
+  webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin())
+}
+
+module.exports = webpackConfig
