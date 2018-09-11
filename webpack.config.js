@@ -7,9 +7,10 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const __HOT__ = !!argv.hot;
 const __DEV__ = !!argv.dev;
+const mode = __DEV__ ? 'development' : 'production'
 
 const webpackConfig = {
-  mode: __DEV__ ? 'development' : 'production',
+  mode,
   entry: {
     app: ['./src/start.js']
   },
@@ -58,7 +59,7 @@ const webpackConfig = {
   ],
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.js', '.json']
   }
 };
 

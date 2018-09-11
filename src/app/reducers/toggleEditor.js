@@ -1,12 +1,12 @@
 const toggleEditor = (state = false, action) => {
-  const { type, visible } = action;
+  const { type, visible } = action
 
   switch (type) {
     case 'TOGGLE_EDITOR':
-      return !visible;
+      return !visible
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default toggleEditor;
+export default toggleEditor

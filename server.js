@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const express = require('express');
 const devMiddleware = require('webpack-dev-middleware');
@@ -18,10 +17,6 @@ app.use(devMiddleware(compiler, {
 }));
 
 app.use(hotMiddleware(compiler));
-
-app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-});
 
 app.listen(8090, function (err) {
     if (err) {

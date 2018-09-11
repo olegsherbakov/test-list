@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-
-import { addEmployee } from '../actions'
-import EmployeeEdit from './EmployeeEdit'
-import styles from './style.scss'
+import EmployeeEdit from '../containers/EmployeeEdit'
+import styles from '../styles/style.scss'
 
 const EmployeesEditor = ({ employees, editorVisible, addEmployee }) => {
   if (!editorVisible) {
@@ -35,13 +32,4 @@ EmployeesEditor.propTypes = {
   addEmployee: PropTypes.func.isRequired
 }
 
-const mapStateToProps = (state) => ({
-  employees: state.employees,
-  editorVisible: state.toggleEditor
-})
-
-const mapDispatchToProps = (dispatch) => ({
-  addEmployee: () => dispatch(addEmployee())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(EmployeesEditor)
+export default EmployeesEditor

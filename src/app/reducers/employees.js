@@ -1,4 +1,6 @@
-const employees = (state = [], action) => {
+const employeesList = []
+
+const employees = (state = employeesList, action) => {
   const { type, id, text } = action
 
   switch (type) {
@@ -8,17 +10,13 @@ const employees = (state = [], action) => {
         { id, text: '', visible: true }
       ]
     case 'EDIT_EMPLOYEE':
-      return state.map(employee => {
-        return (id === employee.id)
-          ? { ...employee, text }
-          : employee
-      })
+      return state.map(employee =>
+        (id === employee.id) ? { ...employee, text } : employee
+      )
     case 'TOGGLE_EMPLOYEE':
-      return state.map(employee => {
-        return (id === employee.id)
-          ? { ...employee, visible: !employee.visible }
-          : employee
-      })
+      return state.map(employee =>
+        (id === employee.id)  ? { ...employee, visible: !employee.visible } : employee
+      )
     default:
       return state
   }

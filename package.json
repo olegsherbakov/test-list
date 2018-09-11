@@ -2,7 +2,7 @@
   "name": "test-list",
   "version": "0.0.1",
   "scripts": {
-    "start": "node server.js --dev --hot --progress --local",
+    "develop": "node server.js --dev --hot --progress --local",
     "deploy": "yarn run deploy --watch --progress"
   },
   "private": true,

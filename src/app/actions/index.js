@@ -2,15 +2,13 @@ let nextId = 0;
 
 export const addEmployee = () => ({
   type: 'ADD_EMPLOYEE',
-  id: nextId++
+  id: ++nextId
 })
 
-export const toggleEditor = visible => {
-  return {
-    type: 'TOGGLE_EDITOR',
-    visible
-  }
-}
+export const toggleEditor = visible => ({
+  type: 'TOGGLE_EDITOR',
+  visible
+})
 
 export const editEmployee = (id, text) => ({
   type: 'EDIT_EMPLOYEE',
