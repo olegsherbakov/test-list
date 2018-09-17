@@ -4,7 +4,7 @@ import styles from '../styles/style.scss'
 
 const Employee = ({ id, text }) => (
   <div className={styles.Employee}>
-    {text ? text : '< описание не указано >'}
+    {id}. {text || '{no description}'}
   </div>
 )
 

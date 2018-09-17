@@ -1,11 +1,28 @@
 @import '~reset-css';
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 230%;
+}
+
 .Container {
+  padding: 1rem;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1024px;
   position: relative;
-  width: 700px;
-  padding-right: 250px;
-  margin: 13px;
-  min-height: 400px;
 }
 
 .EmployeeList {
@@ -25,14 +42,17 @@
   top: 0;
   background: #ccc;
   width: 250px;
-  min-height: 400px;
   padding: 13px;
+  box-shadow: 0 0 5px black;
+  z-index: 1;
 }
 
 .ToggleEditor {
   position: absolute;
-  right: 260px;
-  top: 0;
+  right: 13px;
+  top: 13px;
+  box-shadow: 0 0 5px black;
+  z-index: 2;
 }
 
 .EmployeeEdit {

@@ -14,10 +14,10 @@ export default class ApplicationComponent extends React.Component {
     return (
       <Provider store={store}>
         <div className={styles.Container}>
-          <h3>Список сотрудников</h3>
+          <h1>Employees list</h1>
           <EmployeesList />
-          <EditorToggle />
           <EmployeesEditor />
+          <EditorToggle />
         </div>
       </Provider>
     )

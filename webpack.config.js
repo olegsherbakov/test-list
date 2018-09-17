@@ -3,7 +3,6 @@ const argv = require('yargs').argv
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const __HOT__ = !!argv.hot
 const __DEV__ = !!argv.dev
@@ -51,8 +50,8 @@ const webpackConfig = {
       template: './src/index.html',
       inject: true,
       baseUrl: `/${__DEV__ ? '' : 'employees-list/'}`,
+      favicon: './src/favicon32.png'
     }),
-    new FaviconsWebpackPlugin('./src/favicon32.png'),
     new MiniCssExtractPlugin({
       filename: 'style.css',
       chunkFilename: '[id].css'

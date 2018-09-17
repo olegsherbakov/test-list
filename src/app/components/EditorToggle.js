@@ -7,7 +7,7 @@ const EditorToggle = ({ toggleEditor, editorVisible }) => (
     className={styles.ToggleEditor}
     onClick={() => toggleEditor(editorVisible)}
   >
-    {editorVisible ? 'Close' : 'Open'} menu
+    {editorVisible ? 'close' : 'open'} menu
   </button>
 )
 

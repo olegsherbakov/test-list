@@ -10,10 +10,12 @@ const EmployeesEditor = ({ employees, editorVisible, addEmployee }) => {
 
   return (
     <div className={styles.Editor}>
+      <button onClick={addEmployee} title="add item">
+        ✚
+      </button>
       {employees.map(employee => (
         <EmployeeEdit key={employee.id} {...employee} />
       ))}
-      <button onClick={addEmployee}>Add item</button>
     </div>
   )
 }
