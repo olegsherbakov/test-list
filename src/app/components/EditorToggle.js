@@ -13,7 +13,7 @@ const EditorToggle = ({ toggleEditor, editorVisible }) => (
 
 EditorToggle.propTypes = {
   toggleEditor: PropTypes.func.isRequired,
-  editorVisible: PropTypes.bool.isRequired
+  editorVisible: PropTypes.bool.isRequired,
 }
 
 export default EditorToggle

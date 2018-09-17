@@ -3,11 +3,14 @@ import { toggleEditor } from '../actions'
 import EditorToggle from '../components/EditorToggle'
 
 const mapStateToProps = state => ({
-  editorVisible: state.toggleEditor
+  editorVisible: state.toggleEditor,
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleEditor: visible => dispatch(toggleEditor(visible))
+const mapDispatchToProps = dispatch => ({
+  toggleEditor: visible => dispatch(toggleEditor(visible)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditorToggle)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(EditorToggle)

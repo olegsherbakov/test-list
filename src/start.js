@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import Application from './app/Application';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import Application from './app/Application'
 
 if (module.hot) {
   ReactDOM.render(
@@ -9,18 +9,18 @@ if (module.hot) {
       <Application />
     </AppContainer>,
     document.getElementById('app')
-  );
+  )
 
   module.hot.accept('./app/Application', () => {
     const App = require('./app/Application').default
 
     ReactDOM.render(
       <AppContainer>
-        <App/>
+        <App />
       </AppContainer>,
       document.getElementById('app')
-    );
-  });
+    )
+  })
 } else {
-  ReactDOM.render(<Application />, document.getElementById('app'));
+  ReactDOM.render(<Application />, document.getElementById('app'))
 }

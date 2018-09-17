@@ -50,6 +50,7 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: true,
+      baseUrl: `/${__DEV__ ? '' : 'employees-list/'}`,
     }),
     new FaviconsWebpackPlugin('./src/favicon32.png'),
     new MiniCssExtractPlugin({

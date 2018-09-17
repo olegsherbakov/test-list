@@ -1,9 +1,10 @@
 {
-  "name": "test-list",
-  "version": "0.0.1",
+  "name": "employees-list",
+  "version": "0.0.2",
   "scripts": {
     "develop": "node server.js --dev --hot --progress --local",
-    "build": "yarn install && webpack"
+    "build": "yarn install && webpack",
+    "format": "prettier --write \"src/**/*.{js,css}\""
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "react-hot-loader": "^4.3.6",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
+    "reset-css": "^4.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.17.2",
@@ -31,5 +33,7 @@
     "webpack-dev-middleware": "^3.2.0",
     "webpack-hot-middleware": "^2.23.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^1.14.2"
+  }
 }

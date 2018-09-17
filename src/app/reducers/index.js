@@ -4,5 +4,5 @@ import toggleEditor from './toggleEditor'
 
 export default combineReducers({
   employees,
-  toggleEditor
+  toggleEditor,
 })

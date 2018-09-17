@@ -10,7 +10,7 @@ const Employee = ({ id, text }) => (
 
 Employee.propTypes = {
   id: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 }
 
 export default Employee

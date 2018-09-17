@@ -10,12 +10,9 @@ const EmployeesEditor = ({ employees, editorVisible, addEmployee }) => {
 
   return (
     <div className={styles.Editor}>
-      {employees.map(employee =>
-        <EmployeeEdit
-          key={employee.id}
-          {...employee}
-        />
-      )}
+      {employees.map(employee => (
+        <EmployeeEdit key={employee.id} {...employee} />
+      ))}
       <button onClick={addEmployee}>Add item</button>
     </div>
   )
@@ -29,7 +26,7 @@ EmployeesEditor.propTypes = {
       visible: PropTypes.bool.isRequired,
     }).isRequired
   ).isRequired,
-  addEmployee: PropTypes.func.isRequired
+  addEmployee: PropTypes.func.isRequired,
 }
 
 export default EmployeesEditor
